@@ -29,9 +29,16 @@ public void onClickButton(View v) {
 }
     public void CallingIntent(View view) {
 
-        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
         callIntent.setData(Uri.parse("tel:"+"03234674427"));//change the number
-        startActivity(callIntent);
+        try {
+            startActivity(callIntent);
+        } catch (Exception e) {
+            Intent callIntent2 = new Intent(Intent.ACTION_DIAL);
+            callIntent2.setData(Uri.parse("tel:"+"03234674427"));//change the number
+            startActivity(callIntent2);
+        }
+
 
     }
 }
