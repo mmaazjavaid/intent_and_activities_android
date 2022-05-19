@@ -13,5 +13,11 @@
         android:onClick="onClickButton"
         android:text="CLICK ME"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make a Call"
+        android:onClick="CallingIntent"
+        />
 </LinearLayout>
 

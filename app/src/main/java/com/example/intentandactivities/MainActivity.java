@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,4 +27,11 @@ public void onClickButton(View v) {
         btn.setText("X");
     }
 }
+    public void CallingIntent(View view) {
+
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:"+"03234674427"));//change the number
+        startActivity(callIntent);
+
+    }
 }
