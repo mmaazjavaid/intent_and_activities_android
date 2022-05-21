@@ -14,10 +14,17 @@
         android:text="CLICK ME"
         />
     <Button
+        android:id="@+id/callingIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Make a Call"
-        android:onClick="CallingIntent"
+        android:text="Call"
+
+        />
+    <Button
+        android:id="@+id/buttonOpenSecodActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seccond activity"
         />
 </LinearLayout>
 
