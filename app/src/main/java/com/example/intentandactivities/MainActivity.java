@@ -20,18 +20,9 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(this::onClick);
         b2.setOnClickListener(this::onClick);
     }
-//    public void callME(View view){
-//        Uri uri = Uri.parse("tel:+923001234567");
-//        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
-//        startActivity(intent);
-//    }
 
-public void onClickButton(View v) {
-    if(v.getId() == R.id.yourbuttonid) {
-        Button btn=findViewById(R.id.yourbuttonid);
-        btn.setText("X");
-    }
-}
+
+
     public void CallingIntent(View view) {
 
         Intent callIntent = new Intent(Intent.ACTION_CALL);

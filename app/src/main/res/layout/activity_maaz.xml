@@ -14,5 +14,11 @@
         android:layout_height="wrap_content"
         android:text="Call Brother"
         />
+    <Button
+        android:id="@+id/browserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open web browser"/>
+
 </LinearLayout>
 
