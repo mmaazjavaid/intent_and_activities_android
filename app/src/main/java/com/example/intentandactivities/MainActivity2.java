@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.net.Uri;
+import android.util.Log;
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +16,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         b1.setOnClickListener(this);
         Button b2=findViewById(R.id.browserButton);
         b2.setOnClickListener(this);
+        Button b3=findViewById(R.id.emailButton);
+        b3.setOnClickListener(this);
     }
 
     @Override
@@ -33,6 +36,18 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 Button b=findViewById(R.id.browserButton);
                 b.setText("opened");
                 startActivity(intent);
+                break;
+            case R.id.emailButton:
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.setData(Uri.parse("mailto:"));
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"mmaazj323@gmail.com"});
+                intent.putExtra(Intent.EXTRA_CC, new String[]{"bsef19a010@pucit.edu.pk"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "ANDROID TESTING EMAIL");
+                intent.putExtra(Intent.EXTRA_TEXT, "HEY you both I AM TESTING MY ANDROID APP THANK YOU . ");
+                startActivity(Intent.createChooser(intent, "Send mail..."));
+                finish();
+
                 break;
             default:
                 return;
