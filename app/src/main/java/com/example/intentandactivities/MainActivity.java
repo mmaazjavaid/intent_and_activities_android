@@ -19,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
         b2=findViewById(R.id.buttonOpenSecodActivity);
         b1.setOnClickListener(this::onClick);
         b2.setOnClickListener(this::onClick);
+        Intent intent=getIntent();
+        if(intent.getStringExtra("image")!=null){
+            b2.setText(intent.getStringExtra("image"));
+        }
+
     }
 
 

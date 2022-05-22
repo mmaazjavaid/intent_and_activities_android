@@ -18,6 +18,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         b2.setOnClickListener(this);
         Button b3=findViewById(R.id.emailButton);
         b3.setOnClickListener(this);
+        Button b4=findViewById(R.id.passValuesButton);
+        b4.setOnClickListener(this);
     }
 
     @Override
@@ -47,7 +49,11 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 intent.putExtra(Intent.EXTRA_TEXT, "HEY you both I AM TESTING MY ANDROID APP THANK YOU . ");
                 startActivity(Intent.createChooser(intent, "Send mail..."));
                 finish();
-
+            case R.id.passValuesButton:
+                intent=new Intent(MainActivity2.this,MainActivity.class);
+                intent.putExtra("image","counting");
+                startActivity(intent);
+                finish();
                 break;
             default:
                 return;
